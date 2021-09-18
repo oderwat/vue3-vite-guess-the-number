@@ -1,10 +1,13 @@
 <template>
   <h3>Rate meine Zahl!</h3>
-  <HelloWorld cheat="55" />
+  <GuessTheNumber cheat="0" />
+  <!-- hr>
+  <h3>Rate meine Zahl (Instanz 2 mit 12)!</h3>
+  <GuessTheNumber cheat="12" /-->
 </template>
 
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import GuessTheNumber from './components/GuessTheNumber.vue'
 </script>
 
 <style>
