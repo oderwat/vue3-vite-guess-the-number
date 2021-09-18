@@ -24,8 +24,20 @@ if(props.cheat != 0) {
   var myNumber = Math.floor(Math.random()*100)+1
 }
 
+console.log("myNumber: "+myNumber+" cheat: "+props.cheat)
+
 function submitForm() {
-  console.log("Guess is "+guess.value+" myNumber: "+myNumber+" cheat: "+props.cheat)
+  console.log("Guess is "+guess.value)
+  if(guess.value != Math.floor(guess.value) || guess.value < 1 || guess.value > 100) {
+    msg.value = "Bitte gebe eine Zahl zwischen 1 und 100 ein!"
+  } else if(guess.value > myNumber) {
+    msg.value = "Deine Zahl ist größer!"
+  } else if(guess.value < myNumber) {
+    msg.value = "Deine Zahl ist kleiner!"
+  } else {
+    msg.value = "Glückwunsch! Du hast meine Zahl erraten!"
+  }
+
   elGuess.value.focus()
   elGuess.value.select()
 }
